@@ -1,0 +1,59 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30rem;
+  background-image: url("^../assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: 40% 70%;
+  p {
+    display: flex;
+    background-image: linear-gradient(90deg, #008c45, #f4f9ff, #cd212a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .banner {
+    font-size: 40px;
+    height: 12rem;
+    .subtitle {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .banner {
+    font-size: 50px;
+    height: 16rem;
+    .subtitle {
+      font-size: 30px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .banner {
+    font-size: 60px;
+    height: 20rem;
+  }
+  .subtitle {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .banner {
+    font-size: 70px;
+    height: 24rem;
+  }
+  .subtitle {
+    font-size: 50px;
+  }
+}
