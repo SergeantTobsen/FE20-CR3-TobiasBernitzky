@@ -1,0 +1,9 @@
+<p>details works!</p>
+<div *ngIf="dish">
+  <h3>{{ dish.name }}</h3>
+
+  <h4>{{ dish.price | currency }}</h4>
+
+  <p>{{ dish.description }}</p>
+  <button (click)="addToCart()">order</button>
+</div>
