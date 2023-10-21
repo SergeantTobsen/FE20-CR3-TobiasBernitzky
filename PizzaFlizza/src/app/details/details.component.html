@@ -1,9 +1,25 @@
-<p>details works!</p>
-<div *ngIf="dish">
-  <h3>{{ dish.name }}</h3>
-
-  <h4>{{ dish.price | currency }}</h4>
-
-  <p>{{ dish.description }}</p>
-  <button (click)="addToCart()">order</button>
+<div *ngIf="dish" class="container d-flex justify-content-center">
+  <div class="card p-3" style="width: 35rem">
+    <img src="{{ dish.image }}" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h3 class="card-title">{{ dish.name }}</h3>
+      <p class="card-text">
+        {{ dish.story }}
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <span>Ingredients:</span> {{ dish.description }}
+      </li>
+      <li class="list-group-item">
+        <span>Allergenes: </span>{{ dish.allergenes }}
+      </li>
+      <li class="list-group-item price">
+        <span>Price: {{ dish.price }} € </span>
+      </li>
+    </ul>
+    <div class="card-body">
+      <a (click)="addToCart()" class="btn btn-success">add to order</a>
+    </div>
+  </div>
 </div>

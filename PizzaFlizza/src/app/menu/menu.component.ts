@@ -16,7 +16,6 @@ export class MenuComponent implements OnInit {
   constructor(private cartService: CartService) {}
 
   addToCartwithIndex(index: number) {
-    // Swal.fire(`${this.dishes[index].name} has been added to your order!`);
     Swal.fire({
       title: `${this.dishes[index].name}`,
       text: 'has been added to your order.',

@@ -1,12 +1,44 @@
-<p>cart works!</p>
-
-<div class="cart-item" *ngFor="let item of items">
-  <span>{{ item.name }} </span>
-
-  <span>{{ item.price | currency }}</span>
-  <button (click)="removeFromCart(item)">Delete</button>
+<div class="container p-3">
+  <div *ngFor="let item of items" class="container">
+    <div class="card mb-1" style="max-width: 700px">
+      <div class="row g-0">
+        <div class="col-md-4 d-flex">
+          <img
+            src="{{ item.image }}"
+            class="card-img-top rounded p-4"
+            alt="..."
+            style="max-width: 240px; max-height: 172px"
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">
+              {{ item.description }}
+            </p>
+          </div>
+          <div class="text-body price">
+            Price: {{ item.price }} €
+            <button (click)="removeFromCart(item)" class="btn btn-danger ms-2">
+              x
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card w-50 mx-auto d-flex justify-content-center">
+    <div class="card-body">
+      <table>
+        <p>Order: {{ total }} €</p>
+        <p>Service: {{ service }} €</p>
+        <p>Discount: {{ disc }} €</p>
+        <hr />
+        <p class="total">
+          Total Amount: {{ totalAll }} €
+          <a (click)="clearCart()" class="btn btn-success ms-5">purchase</a>
+        </p>
+      </table>
+    </div>
+  </div>
 </div>
-<p>Order: {{ total }} €</p>
-<p>Service: {{ service }} €</p>
-<p>Discount: {{ disc }} €</p>
-<p>Total Amount: {{ totalAll }} €</p>

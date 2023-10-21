@@ -6,4 +6,6 @@ export interface dishesInterface {
   description?: string;
   image?: string;
   availability?: boolean;
+  allergenes?: string;
+  story?: string;
 }

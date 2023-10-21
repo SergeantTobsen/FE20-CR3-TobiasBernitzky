@@ -8,6 +8,7 @@
   background-image: url("^../assets/images/background.jpg");
   background-repeat: no-repeat;
   background-position: 40% 70%;
+
   p {
     display: flex;
     background-image: linear-gradient(90deg, #008c45, #f4f9ff, #cd212a);
@@ -15,6 +16,28 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .btn {
+    font-weight: 550;
+  }
+}
+
+.container {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  line-height: 250%;
+  p {
+    display: flex;
+    text-align: justify;
+    font-size: larger;
+  }
+  ul {
+    font-size: 20px;
+  }
+}
+
+img {
+  width: 40%;
+  height: auto;
 }
 
 @media only screen and (max-width: 600px) {
@@ -24,6 +47,22 @@
     .subtitle {
       font-size: 20px;
       text-align: center;
+    }
+  }
+
+  .container {
+    line-height: 150%;
+    h1 {
+      font-size: 20px;
+    }
+    h4 {
+      font-size: 12px;
+    }
+    p,
+    ul {
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
     }
   }
 }

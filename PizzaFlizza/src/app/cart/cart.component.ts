@@ -35,4 +35,10 @@ export class CartComponent implements OnInit {
       this.totalAll = this.cartService.calcTotalAll();
     }
   }
+
+  clearCart() {
+    this.cartService.clearCart();
+    this.cartService.saveToLocalStorage();
+    this.ngOnInit();
+  }
 }
