@@ -13,3 +13,14 @@
     font-size: 20px;
   }
 }
+
+@media only screen and (max-width: 450px) {
+  img {
+    width: 100%;
+  }
+  .card {
+    .price {
+      margin-left: 40%;
+    }
+  }
+}
