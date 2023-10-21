@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { dishesInterface } from './dishesInterface';
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root',
@@ -27,6 +28,11 @@ export class CartService {
     this.items = [];
     this.saveToLocalStorage();
 
+    Swal.fire(
+      'Your order has been submitted!',
+      'Thank you for choosing Pizza Flizza',
+      'success'
+    );
     return this.items;
   }
 
